@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="contact-form">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit" id="submit-button">Kirim</button>
+        
+        <p id="status-message"></p>
+    </form>
+
+<script>
+    const form = document.getElementById('contact-form');
+    const submitButton = document.getElementById('submit-button');
+    const statusMessage = document.getElementById('status-message');
+    
+    // Tempelkan URL Web App Anda di sini
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzgb6ArUQKEhWW-_P7RBfIagCRe4QYmusAuRBW7awjmyHMB_2JB_HSbZkvkIexh10ez/exec";
+  
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // Mencegah form reload halaman
+  
+      submitButton.disabled = true; 
+      submitButton.textContent = 'Mengirim...';
+      statusMessage.textContent = ''; 
+  
+      const formData = new FormData(form);
+  
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.result === 'success') {
+          statusMessage.textContent = 'Terima kasih! Pesan Anda telah terkirim.';
+          form.reset(); // Kosongkan formulir
+        } else {
+          throw new Error(data.error || 'Terjadi kesalahan yang tidak diketahui.');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        statusMessage.textContent = 'Oops! Terjadi kesalahan: ' + error.message;
+      })
+      .finally(() => {
+        submitButton.disabled = false; 
+        submitButton.textContent = 'Kirim';
+      });
+    });
+  </script>
+</body>
+</html>
