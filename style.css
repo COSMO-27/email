@@ -5,9 +5,13 @@ body {
     align-items: center;     /* Tengah horizontal */
     min-height: 100vh;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'archivo', sans-serif;
     text-align: center;
     background: linear-gradient(to bottom, #f9d7d7, #e30b0b);
+  }
+
+  a{
+    color: #000;
   }
   
   /* Background image di belakang */
@@ -22,11 +26,15 @@ body {
   }
   
   .logo {
-    width: 200px;
+    width: 175px;
     z-index: 1;
   }
   
-  br {
+  .br {
+    color: gray;
+  }
+
+  .br .highligth{
     color: white;
   }
   
@@ -45,7 +53,7 @@ body {
   .h1 h1 {
     color: white;
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
     line-height: 1.2;
   }
   
@@ -81,20 +89,6 @@ body {
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.8);
     color: #000;
-  }
-  
-  form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  form button:hover {
-    background-color: #0056b3;
   }
   
   /* RESET */
@@ -166,17 +160,10 @@ body {
   }
   
   /* Warna Hover */
-  .wrapper .facebook:hover,
-  .wrapper .facebook:hover .tooltip,
-  .wrapper .facebook:hover .tooltip::before {
-    background: #1877F2;
-    color: #ffffff;
-  }
-  
-  .wrapper .tiktok:hover,
-  .wrapper .tiktok:hover .tooltip,
-  .wrapper .tiktok:hover .tooltip::before {
-    background: #000000;
+  .wrapper .whatsapp:hover,
+  .wrapper .whatsapp:hover .tooltip,
+  .wrapper .whatsapp:hover:hover .tooltip::before {
+    background: #25D366;
     color: #ffffff;
   }
   
@@ -187,12 +174,6 @@ body {
     color: #ffffff;
   }
   
-  .wrapper .youtube:hover,
-  .wrapper .youtube:hover .tooltip,
-  .wrapper .youtube:hover .tooltip::before {
-    background: #CD201F;
-    color: #ffffff;
-  }
 
 .brand{
   padding: 60px;
@@ -286,15 +267,19 @@ body {
     }
   
     .logo {
-      width: 110px;
+      width: 100px;
     }
   
     .h1 h1 {
-      font-size: 1em;
+      font-size: 1.3em;
+    }
+
+    .br{
+      font-size: 0.5em;
     }
   
     form {
-      width: 90%;
+      width: 85%;
       padding: 8px 12px;
       border-radius: 6px;
     }
@@ -303,6 +288,10 @@ body {
     form button {
       font-size: 11px;
       padding: 5px;
+    }
+
+    .buttonMbud{
+      width: 100%;
     }
   
     /* Ikon sangat kecil */
@@ -322,18 +311,23 @@ body {
       top: -25px;
     }
   }
-  
+
+  .buttonMbud{
+    width: auto;
+    height: auto;
+  }
+    
   .bn632-hover {
-    width: 350px;
-    height: 20px;
+    width: 375px;
+    height: 35.5px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     margin: 20px;
-    height: 55px;
     text-align:center;
     border: none;
+    border-radius: 7px;
     background-size: 300% 100%;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -363,41 +357,7 @@ body {
     );
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
   }
-
-  .bn632-hover { 
-    width: 350px;
-    height: 55px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    cursor: pointer;
-    margin: 20px auto;
-    text-align: center;
-    border: none;
-    background-size: 300% 100%;
-    transition: all .4s ease-in-out;
-    display: block;
-  }
-  
-  .bn632-hover:hover {
-    background-position: 100% 0;
-  }
-  
-  .bn632-hover:focus {
-    outline: none;
-  }
-  
-  .bn632-hover.bn19 {
-    background-image: linear-gradient(
-      to right,
-      #f5ce62,
-      #e43603,
-      #fa7199,
-      #e85a19
-    );
-    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
-  }
-  
+ 
   /* Responsiveness */
   
   /* Tablet */
