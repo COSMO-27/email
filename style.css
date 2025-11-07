@@ -7,7 +7,6 @@ body {
     margin: 0;
     font-family: 'archivo', sans-serif;
     text-align: center;
-    background: linear-gradient(to bottom, #f9d7d7, #e30b0b);
   }
 
   a{
@@ -23,6 +22,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    background-image: rgba(0,0,0,0.5);
   }
   
   .logo {
@@ -31,12 +31,22 @@ body {
   }
   
   .br {
-    color: gray;
+    color:whitesmoke;
+  }
+
+  .uhuy{
+    padding: 35px;
   }
 
   .br .highligth{
     color: white;
+    font-weight: bolder;
   }
+
+  .brfont{
+    padding-bottom: 25px;
+  }
+
   
   /* Kontainer utama agar h1 di atas form */
   .container {
@@ -174,6 +184,16 @@ body {
     color: #ffffff;
   }
   
+  .wrapper .threads:hover,
+  .wrapper .threads:hover .tooltip,
+  .wrapper .threads:hover .tooltip::before {
+    background: black;
+    color: #ffffff;
+  }
+  
+  
+  
+  
 
 .brand{
   padding: 60px;
@@ -258,6 +278,12 @@ body {
   @media (max-width: 480px) {
     body {
       padding: 20px 8px;
+      overflow-x: hidden;
+    }
+
+    .fix{
+      height: auto;
+      width: auto;
     }
   
     .container {
@@ -267,31 +293,36 @@ body {
     }
   
     .logo {
-      width: 100px;
+      width: 75px;
     }
   
     .h1 h1 {
-      font-size: 1.3em;
+      font-size: 31.5px;
     }
 
     .br{
-      font-size: 0.5em;
+      font-size: 13px;
+      width: 350px;
+      height: auto;
     }
-  
-    form {
-      width: 85%;
+
+
+    .form {
+      width: 75%;
       padding: 8px 12px;
       border-radius: 6px;
     }
+
+    .buttonMbud{
+      width: auto;
+      height: auto;
+    }
+    
   
     form input,
     form button {
       font-size: 11px;
       padding: 5px;
-    }
-
-    .buttonMbud{
-      width: 100%;
     }
   
     /* Ikon sangat kecil */
@@ -312,11 +343,6 @@ body {
     }
   }
 
-  .buttonMbud{
-    width: auto;
-    height: auto;
-  }
-    
   .bn632-hover {
     width: 375px;
     height: 35.5px;
@@ -327,9 +353,9 @@ body {
     margin: 20px;
     text-align:center;
     border: none;
-    border-radius: 7px;
+    border-radius: 6px;
     background-size: 300% 100%;
-    moz-transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -337,7 +363,7 @@ body {
   
   .bn632-hover:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
