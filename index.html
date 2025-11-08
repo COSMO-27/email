@@ -63,7 +63,7 @@
       .then(response => response.json())
       .then(data => {
         if (data.result === 'success') {
-          statusMessage.textContent = 'Selamatt jadi temann';
+          statusMessage.textContent = 'e-mail kamu berhasil terkirim';
           form.reset(); // Kosongkan formulir
         } else {
           throw new Error(data.error || 'Terjadi kesalahan yang tidak diketahui.');
