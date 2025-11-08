@@ -37,7 +37,7 @@ body {
   }
   
   .br {
-    color:whitesmoke;
+    color:white;
   }
 
   .uhuy{
@@ -312,6 +312,7 @@ body {
       width: 350px;
       height: auto;
       padding-bottom: 0.1px;
+      margin-bottom: -20.5px;
     }
 
 
